@@ -1,3 +1,7 @@
+/** simpleHeaderMessage.js
+    Alex Buznik, 2017
+    https://github.com/beshur/simpleHeaderMessage
+*/
 function simpleHeaderMessage(options) {
   var $this = this;
   this.options = options;
@@ -65,11 +69,3 @@ function simpleHeaderMessage(options) {
   this.autoShow();
   return this;
 };
-
-/** test use
-var n = new simpleHeaderMessage({
-  messageId: '1708083_new_site',
-  style: 'info',
-  html: 'Наш новый сайт! <a href="http://new.svitzdorovya.com/" target="_blank">Нажмите здесь</a>'
-});
-*/
