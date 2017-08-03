@@ -1,0 +1,87 @@
+.header_fixed_message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1AADBD;
+  padding: 16px 30px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #fff;
+  transform: translateY(-100%);
+  transition: .5s all;
+}
+.header_fixed_message a {
+  color: #11575f;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.header_fixed_message__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 30px;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+.header_fixed_message__close::before,
+.header_fixed_message__close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+
+  height: 1px;
+  width: 10px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.header_fixed_message__close::after {
+  transform: rotate(-45deg);
+
+}
+
+
+.header_fixed_message.slideIn {
+  transform: translateY(0);
+}
+
+/* from https://daneden.github.io/animate.css/ */
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
