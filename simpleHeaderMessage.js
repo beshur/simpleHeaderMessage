@@ -1,4 +1,5 @@
-/** simpleHeaderMessage.js
+/**
+    simpleHeaderMessage.js
     Alex Buznik, 2017
     https://github.com/beshur/simpleHeaderMessage
 */
