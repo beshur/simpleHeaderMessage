@@ -18,6 +18,9 @@
   transform: translateY(-100%);
   transition: .5s all;
 }
+.header_fixed_message.active {
+  box-shadow: 0px 3px 10px -5px #000;
+}
 .header_fixed_message a {
   color: #11575f;
   color: #fff;

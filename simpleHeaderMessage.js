@@ -22,7 +22,7 @@ function simpleHeaderMessage(options) {
   document.body.append(this.el);
 
   this.close = function(event) {
-    $this.el.classList.remove($this.animation_class);
+    $this.el.classList.remove($this.animation_class, 'active');
 
     if ($this.storage) {
       $this.storage.setItem($this.getStorageId() + ':closed', true);
@@ -31,7 +31,7 @@ function simpleHeaderMessage(options) {
 
   this.show = function() {
     $this.el
-      .classList.add($this.animation_class);
+      .classList.add($this.animation_class, 'active');
   }
 
   this.getStorageId = function() {
